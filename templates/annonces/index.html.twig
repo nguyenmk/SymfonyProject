@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AnnoncesController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="container example-wrapper">
+    <h1> Les annonces </h1>
+    <div>
+        <div class="row">
+            {% for annonce in annonces %}
+                <div class="card border-success col-md-4">
+                    <div class="card-header">{{annonce.titre}}</div>
+                    <img src="{{annonce.photo}}" style="margin:0 auto; width:100%">
+                    <div class="card-body">
+                        <p class="card-text">{{annonce.prix}} &euro;</p>
+                        <button type="button" class="btn btn-success" onclick="location.href='/annonce/{{annonce.id}}'">Plus d'info</button>
+                    </div>
+                </div> 
+            {% endfor %}    
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

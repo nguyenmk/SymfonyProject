@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1> {{ salut }}</h1>
+    {% if people %}
+        {% for prenom, age in people %}
+            {% if age >= 18 %}
+                <p> {{prenom}} est majeur </p>
+            {% else %}
+                <p> {{prenom}} est  mineur </p>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock body %}
+
