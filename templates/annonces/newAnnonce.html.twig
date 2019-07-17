@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AnnoncesController!{% endblock %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+    {{ form_end(form) }}
+{# <form>
+    <fieldset>
+        <legend>Nouvelle annonce</legend>
+        <div class="form-group">
+            <label for="exampleInputTitre">Titre</label>
+            <input type="email" class="form-control" id="titre" placeholder="Entrer titre">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPrix">Prix</label>
+            <input type="prix" class="form-control" id="prix" placeholder="Entrer prix">
+        </div>    
+        <div class="form-group">
+            <label for="exampleDescription">Description</label>
+            <textarea class="form-control" id="description" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleImage">File input</label>
+            <input type="file" class="form-control-file" id="imagePath" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">Browse image from your computer.</small>
+        </div>    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+</form> #}
+{% endblock %}
